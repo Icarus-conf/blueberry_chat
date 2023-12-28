@@ -77,9 +77,24 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          "assets/blueberry.png",
-                          width: 100,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            PoppinsText(
+                              text: "Register",
+                              fontS: 40,
+                              color: Colors.white,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            PoppinsText(
+                              text: "Now",
+                              fontS: 40,
+                              color: Color(0xFF4A306D),
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ],
                         ),
                         SizedBox(
                           height: 50,

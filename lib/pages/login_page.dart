@@ -63,9 +63,21 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      "assets/blueberry.png",
-                      width: 100,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        PoppinsText(
+                          text: "Blue",
+                          fontS: 40,
+                          color: Color(0xFF4A306D),
+                        ),
+                        PoppinsText(
+                          text: "Berry",
+                          fontS: 40,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: 50,
