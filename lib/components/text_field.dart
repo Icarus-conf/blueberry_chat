@@ -6,6 +6,7 @@ class MyTextField extends StatelessWidget {
   final bool obscureText;
   final Color color;
   final Color color2;
+  final Color color3;
 
   const MyTextField({
     super.key,
@@ -14,6 +15,7 @@ class MyTextField extends StatelessWidget {
     required this.obscureText,
     required this.color,
     required this.color2,
+    required this.color3,
   });
 
   @override
@@ -39,7 +41,7 @@ class MyTextField extends StatelessWidget {
         filled: true,
         hintText: hintText,
         hintStyle: TextStyle(
-          color: Colors.grey[600],
+          color: color3,
         ),
       ),
     );

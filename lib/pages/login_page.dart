@@ -77,6 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                       height: 25,
                     ),
                     MyTextField(
+                      color3: const Color.fromARGB(255, 221, 217, 217),
                       color2: Colors.white,
                       color: Color(0xFF4E5283),
                       controller: emailController,
@@ -87,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                       height: 10,
                     ),
                     MyTextField(
+                      color3: const Color.fromARGB(255, 221, 217, 217),
                       color2: Colors.white,
                       color: Color(0xFF4E5283),
                       controller: passwordContoller,

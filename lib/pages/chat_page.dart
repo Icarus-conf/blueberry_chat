@@ -100,7 +100,11 @@ class _ChatPageState extends State<ChatPage> {
                   ? MainAxisAlignment.end
                   : MainAxisAlignment.start,
           children: [
-            Text(data['senderEmail']),
+            PoppinsText(
+              text: data['senderEmail'],
+              fontS: 12,
+              color: Colors.grey,
+            ),
             SizedBox(
               height: 10,
             ),
@@ -119,6 +123,7 @@ class _ChatPageState extends State<ChatPage> {
         children: [
           Expanded(
             child: MyTextField(
+              color3: Color.fromARGB(255, 233, 232, 232),
               color2: Colors.black,
               color: Color(0xFFAFCBFF),
               controller: _messageController,
