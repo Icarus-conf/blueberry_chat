@@ -67,7 +67,7 @@ class _RegisterPageState extends State<RegisterPage> {
               sigmaY: 5,
             ),
             child: Container(
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withOpacity(0.3),
               child: Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: 25,
@@ -149,7 +149,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               child: PoppinsText(
                                 text: "Login now",
                                 fontS: 16,
-                                color: Colors.lightBlueAccent,
+                                color: Color(0xFFade8f4),
                                 fontWeight: FontWeight.w700,
                               ),
                             ),

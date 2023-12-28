@@ -124,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: PoppinsText(
                             text: "Register now",
                             fontS: 16,
-                            color: Colors.lightBlueAccent,
+                            color: Color(0xFFade8f4),
                             fontWeight: FontWeight.w700,
                           ),
                         ),
