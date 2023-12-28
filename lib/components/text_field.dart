@@ -29,12 +29,14 @@ class MyTextField extends StatelessWidget {
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.grey.shade200,
+            color: Color(0xFF4A306D),
+            width: 1.0,
           ),
         ),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.white,
+            color: Color(0xFF4A306D),
+            width: 2.0,
           ),
         ),
         fillColor: color,

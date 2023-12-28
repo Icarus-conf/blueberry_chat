@@ -43,7 +43,7 @@ class _ChatPageState extends State<ChatPage> {
           fontS: 20,
           fontWeight: FontWeight.w600,
         ),
-        backgroundColor: Color(0xFF4E5283),
+        backgroundColor: const Color(0xFF4E5283),
       ),
       body: Column(
         children: [
@@ -51,7 +51,7 @@ class _ChatPageState extends State<ChatPage> {
             child: _buildMessageList(),
           ),
           _buildMessageInput(),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
         ],
@@ -68,7 +68,7 @@ class _ChatPageState extends State<ChatPage> {
             return Text("ERROR${snapshot.error}");
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Text("Loading..");
+            return const Text("Loading..");
           }
 
           return ListView(
@@ -106,15 +106,15 @@ class _ChatPageState extends State<ChatPage> {
               fontS: 12,
               color: Colors.grey,
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             //Color(0xFF54577C)
             ChatBubble(
               message: data['message'],
               color: (data['senderId'] == _firebaseAuth.currentUser!.uid)
-                  ? Color(0xFF457b9d)
-                  : Color(0xFF5e548e),
+                  ? const Color(0xFF457b9d)
+                  : const Color(0xFF5e548e),
             ),
           ],
         ),
@@ -130,21 +130,21 @@ class _ChatPageState extends State<ChatPage> {
         children: [
           Expanded(
             child: MyTextField(
-              color3: Color.fromARGB(255, 233, 232, 232),
+              color3: const Color.fromARGB(255, 233, 232, 232),
               color2: Colors.black,
-              color: Color(0xFFAFCBFF),
+              color: const Color(0xFFAFCBFF),
               controller: _messageController,
               hintText: "Enter a message",
               obscureText: false,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 8,
           ),
           GestureDetector(
             onTap: sendMessage,
             child: CircleAvatar(
-              backgroundColor: Color(0xFFAFCBFF),
+              backgroundColor: const Color(0xFFAFCBFF),
               radius: 25,
               child: Image.asset(
                 "assets/send.png",

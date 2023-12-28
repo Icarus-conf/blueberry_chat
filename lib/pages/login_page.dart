@@ -57,13 +57,13 @@ class _LoginPageState extends State<LoginPage> {
             child: Container(
               color: Colors.black.withOpacity(0.3),
               child: Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 25,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         PoppinsText(
@@ -79,16 +79,16 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 50,
                     ),
-                    PoppinsText(
-                      text: "Welcome back you\'ve been missed!",
+                    const PoppinsText(
+                      text: "Welcome back you've been missed!",
                       fontS: 16,
                       color: Color(0xFF4A306D),
                       fontWeight: FontWeight.w600,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     MyTextField(
@@ -99,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                       hintText: "Email",
                       obscureText: false,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     MyTextField(
@@ -110,30 +110,30 @@ class _LoginPageState extends State<LoginPage> {
                       hintText: "Password",
                       obscureText: true,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     MyButton(
                       onTap: signIn,
                       text: "Sign In",
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        PoppinsText(
+                        const PoppinsText(
                           text: "Not a member?",
                           fontS: 16,
                           color: Colors.white,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         GestureDetector(
                           onTap: widget.onTap,
-                          child: PoppinsText(
+                          child: const PoppinsText(
                             text: "Register now",
                             fontS: 16,
                             color: Color(0xFFade8f4),

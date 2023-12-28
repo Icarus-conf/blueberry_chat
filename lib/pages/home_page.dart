@@ -27,16 +27,16 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: PoppinsText(
+        title: const PoppinsText(
           text: "BlueBerry Chat",
           fontS: 25,
           fontWeight: FontWeight.w600,
         ),
-        backgroundColor: Color(0xFF4E5283),
+        backgroundColor: const Color(0xFF4E5283),
         actions: [
           IconButton(
             onPressed: signOut,
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
           ),
         ],
       ),
@@ -49,11 +49,11 @@ class _HomePageState extends State<HomePage> {
       stream: FirebaseFirestore.instance.collection('users').snapshots(),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return Text("ERROR");
+          return const Text("ERROR");
         }
 
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Text("Loading..");
+          return const Text("Loading..");
         }
 
         return ListView(
@@ -70,58 +70,58 @@ class _HomePageState extends State<HomePage> {
 
     if (_auth.currentUser!.email != data['email']) {
       return SingleChildScrollView(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: 25,
         ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 25.0,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: double.infinity,
-                color: Color(0xFFE3EBFF),
-                padding: EdgeInsets.all(
-                  25,
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ChatPage(
+                  receiverUserEmail: data['email'],
+                  receiverUserID: data['uid'],
                 ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ChatPage(
-                          receiverUserEmail: data['email'],
-                          receiverUserID: data['uid'],
-                        ),
-                      ),
-                    );
-                  },
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 25.0,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: double.infinity,
+                  color: const Color(0xFFE3EBFF),
+                  padding: const EdgeInsets.all(
+                    25,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      PoppinsText(
+                      const PoppinsText(
                         text: "User Email:",
                         fontS: 16,
                         fontWeight: FontWeight.w700,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       PoppinsText(
                         text: data['email'],
                         fontS: 16,
-                        color: Color(0xFF485696),
+                        color: const Color(0xFF485696),
                       ),
                     ],
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-            ],
+                const SizedBox(
+                  height: 8,
+                ),
+              ],
+            ),
           ),
         ),
       );

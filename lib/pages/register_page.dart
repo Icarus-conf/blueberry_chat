@@ -25,7 +25,7 @@ class _RegisterPageState extends State<RegisterPage> {
   void signUp() async {
     if (passwordContoller.text != confirmPasswordController.text) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
           content: Text("Passwords don't match"),
         ),
       );
@@ -69,7 +69,7 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Container(
               color: Colors.black.withOpacity(0.3),
               child: Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 25,
                 ),
                 child: Center(
@@ -77,7 +77,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             PoppinsText(
@@ -96,16 +96,16 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         ),
-                        PoppinsText(
-                          text: "Let\s create an account for you.",
+                        const PoppinsText(
+                          text: "Lets create an account for you.",
                           fontS: 16,
                           color: Color(0xFF4A306D),
                           fontWeight: FontWeight.w600,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         MyTextField(
@@ -116,7 +116,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           hintText: "Email",
                           obscureText: false,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         MyTextField(
@@ -127,7 +127,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           hintText: "Password",
                           obscureText: true,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         MyTextField(
@@ -138,30 +138,30 @@ class _RegisterPageState extends State<RegisterPage> {
                           hintText: "Confirm Password",
                           obscureText: true,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         MyButton(
                           onTap: signUp,
                           text: "Sign Up",
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            PoppinsText(
+                            const PoppinsText(
                               text: "Already a member?",
                               fontS: 16,
                               color: Colors.white,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             GestureDetector(
                               onTap: widget.onTap,
-                              child: PoppinsText(
+                              child: const PoppinsText(
                                 text: "Login now",
                                 fontS: 16,
                                 color: Color(0xFFade8f4),
