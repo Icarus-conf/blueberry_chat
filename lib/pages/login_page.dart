@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:blueberry_chat/components/button.dart';
+import 'package:blueberry_chat/components/colors.dart';
 import 'package:blueberry_chat/components/text_field.dart';
 import 'package:blueberry_chat/components/text_format.dart';
 import 'package:blueberry_chat/services/auth/auth_service.dart';
@@ -72,6 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                     PoppinsText(
                       text: "Welcome back you\'ve been missed!",
                       fontS: 16,
+                      color: Colors.white,
                     ),
                     SizedBox(
                       height: 25,
@@ -79,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                     MyTextField(
                       color3: const Color.fromARGB(255, 221, 217, 217),
                       color2: Colors.white,
-                      color: Color(0xFF4E5283),
+                      color: loginRegisterTextFieldColor,
                       controller: emailController,
                       hintText: "Email",
                       obscureText: false,
@@ -90,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                     MyTextField(
                       color3: const Color.fromARGB(255, 221, 217, 217),
                       color2: Colors.white,
-                      color: Color(0xFF4E5283),
+                      color: loginRegisterTextFieldColor,
                       controller: passwordContoller,
                       hintText: "Password",
                       obscureText: true,

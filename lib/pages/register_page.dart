@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:blueberry_chat/components/button.dart';
+import 'package:blueberry_chat/components/colors.dart';
 import 'package:blueberry_chat/components/text_field.dart';
 import 'package:blueberry_chat/components/text_format.dart';
 import 'package:blueberry_chat/services/auth/auth_service.dart';
@@ -93,7 +94,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         MyTextField(
                           color3: const Color.fromARGB(255, 221, 217, 217),
                           color2: Colors.white,
-                          color: Color(0xFF4E5283),
+                          color: loginRegisterTextFieldColor,
                           controller: emailController,
                           hintText: "Email",
                           obscureText: false,
@@ -104,7 +105,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         MyTextField(
                           color3: const Color.fromARGB(255, 221, 217, 217),
                           color2: Colors.white,
-                          color: Color(0xFF4E5283),
+                          color: loginRegisterTextFieldColor,
                           controller: passwordContoller,
                           hintText: "Password",
                           obscureText: true,
@@ -115,7 +116,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         MyTextField(
                           color3: const Color.fromARGB(255, 221, 217, 217),
                           color2: Colors.white,
-                          color: Color(0xFF4E5283),
+                          color: loginRegisterTextFieldColor,
                           controller: confirmPasswordController,
                           hintText: "Confirm Password",
                           obscureText: true,
