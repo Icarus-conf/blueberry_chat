@@ -109,7 +109,13 @@ class _ChatPageState extends State<ChatPage> {
             SizedBox(
               height: 10,
             ),
-            ChatBubble(message: data['message']),
+            //Color(0xFF54577C)
+            ChatBubble(
+              message: data['message'],
+              color: (data['senderId'] == _firebaseAuth.currentUser!.uid)
+                  ? Color(0xFF457b9d)
+                  : Color(0xFF5e548e),
+            ),
           ],
         ),
       ),
