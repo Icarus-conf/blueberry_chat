@@ -98,7 +98,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                     );
                   },
-                  child: Row(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       PoppinsText(
                         text: "User Email:",
