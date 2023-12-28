@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
               sigmaY: 5,
             ),
             child: Container(
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withOpacity(0.3),
               child: Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: 25,
@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     MyTextField(
                       color3: loginRegisterTextFieldHintColor,
-                      color2: Colors.white,
+                      color2: loginRegisterTextFieldTextColor,
                       color: loginRegisterTextFieldColor,
                       controller: emailController,
                       hintText: "Email",
@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     MyTextField(
                       color3: loginRegisterTextFieldHintColor,
-                      color2: Colors.white,
+                      color2: loginRegisterTextFieldTextColor,
                       color: loginRegisterTextFieldColor,
                       controller: passwordContoller,
                       hintText: "Password",

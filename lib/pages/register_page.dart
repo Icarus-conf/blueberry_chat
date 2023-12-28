@@ -95,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                         MyTextField(
                           color3: loginRegisterTextFieldHintColor,
-                          color2: Colors.white,
+                          color2: loginRegisterTextFieldTextColor,
                           color: loginRegisterTextFieldColor,
                           controller: emailController,
                           hintText: "Email",
@@ -106,7 +106,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                         MyTextField(
                           color3: loginRegisterTextFieldHintColor,
-                          color2: Colors.white,
+                          color2: loginRegisterTextFieldTextColor,
                           color: loginRegisterTextFieldColor,
                           controller: passwordContoller,
                           hintText: "Password",
@@ -117,7 +117,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                         MyTextField(
                           color3: loginRegisterTextFieldHintColor,
-                          color2: Colors.white,
+                          color2: loginRegisterTextFieldTextColor,
                           color: loginRegisterTextFieldColor,
                           controller: confirmPasswordController,
                           hintText: "Confirm Password",
