@@ -31,12 +31,16 @@ class _HomePageState extends State<HomePage> {
           text: "BlueBerry Chat",
           fontS: 25,
           fontWeight: FontWeight.w600,
+          color: Colors.white,
         ),
         backgroundColor: const Color(0xFF4E5283),
         actions: [
           IconButton(
             onPressed: signOut,
-            icon: const Icon(Icons.logout),
+            icon: const Icon(
+              Icons.logout,
+              color: Colors.white,
+            ),
           ),
         ],
       ),

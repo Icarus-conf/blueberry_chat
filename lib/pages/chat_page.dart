@@ -37,11 +37,15 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
         centerTitle: true,
         title: PoppinsText(
           text: widget.receiverUserEmail,
           fontS: 20,
           fontWeight: FontWeight.w600,
+          color: Colors.white,
         ),
         backgroundColor: const Color(0xFF4E5283),
       ),
@@ -116,6 +120,7 @@ class _ChatPageState extends State<ChatPage> {
                   ? const Color(0xFF457b9d)
                   : const Color(0xFF5e548e),
             ),
+            SizedBox(height: 10),
           ],
         ),
       ),
@@ -127,12 +132,13 @@ class _ChatPageState extends State<ChatPage> {
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Expanded(
             child: MyTextField(
-              color3: const Color.fromARGB(255, 233, 232, 232),
+              color3: Colors.grey.shade400,
               color2: Colors.black,
-              color: const Color(0xFFAFCBFF),
+              color: Colors.white,
               controller: _messageController,
               hintText: "Enter a message",
               obscureText: false,
